@@ -1,0 +1,28 @@
+{
+  "name": "editor.silex.me",
+  "version": "1.0.5",
+  "description": "This repo holds the code for the free public Silex instance hosted by Silex Labs foundation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "npm run build",
+    "build": "npm run build:html",
+    "build:html": "pug -O env.js index.pug -o dist/"
+  },
+  "engines": {
+    "node": ">=10.15.3 <=11.15.0"
+  },
+  "author": "lexoyo",
+  "license": "MPL",
+  "dependencies": {
+    "got": "^11.5.0",
+    "pug": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "serve-static": "^1.14.1",
+    "silex-website-builder": "silexlabs/Silex#master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:silexlabs/editor.silex.me.git"
+  }
+}
